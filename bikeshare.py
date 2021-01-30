@@ -14,20 +14,23 @@ welcome_pic = """-----__o------
 ----_\ <,_----
 ---(_)/ (_)---"""
 
-chicago_pic = """-----
- ☆☆☆☆☆
- -----
+chicago_pic = """ -----
+  ☆☆☆☆☆
+  -----
+ CHICAGO
 """
 
 nyc_pic = """  /
  /\//\\
  ||
  \___/
+  NYC
 """
 
 washington_pic = """☆ ☆ ☆
  -----
  -----
+ WasDC
 """
 
 CITY_PICS = { 'chicago': chicago_pic,
@@ -257,7 +260,7 @@ def main():
         df = load_data(city, month, day)
         city_pic = CITY_PICS[city]
 
-        print("\n", "Your city is:", city.title(), "\n", city_pic, "Your month is:", month.title(), "\n", "Your day is:", day.title(), "\n")
+        print("\n", city_pic, "Your month is:", month.title(), "\n", "Your day is:", day.title(), "\n")
 
         show_raw_data(df)
         time_stats(df)
