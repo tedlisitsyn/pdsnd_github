@@ -114,7 +114,7 @@ def show_raw_data(df):
         try:
             k = int(i)
         except(ValueError):
-            i = 5
+            i = 10
         else:
             i = k
 
@@ -189,13 +189,13 @@ def trip_duration_stats(df):
     total_time_mins = int((total_time // 60) % 60)
     total_time_hours = int(((total_time // 60) // 60) % 24)
     total_time_days = int(((total_time // 60) // 60) // 24)
-    print("The total biking time is", total_time, "seconds, or",total_time_days,"days,",total_time_hours,"hours,",total_time_mins,"minutes and",total_time_sec,"seconds")
+    print("The total biking time is", total_time_days,"days,",total_time_hours,"hours,",total_time_mins,"minutes and",total_time_sec,"seconds")
 
     # TO DO: display mean travel time
     average_time = int(df['Trip Duration'].mean())
     average_time_sec = int(average_time % 60)
     average_time_mins = int(average_time // 60)
-    print("The average biking time is", average_time, "seconds, or",average_time_mins,"minutes and",average_time_sec,"seconds")
+    print("The average biking time is", average_time_mins,"minutes and",average_time_sec,"seconds")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -272,8 +272,8 @@ def main():
         else:
             '\n'
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? (Y/N)\n')
+        if restart.lower() != 'y':
             break
 
 if __name__ == "__main__":
