@@ -269,8 +269,8 @@ def main():
         else:
             '\n'
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? (Y/N)\n')
+        if restart.lower() != 'y':
             break
 
 if __name__ == "__main__":
