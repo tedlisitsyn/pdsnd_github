@@ -111,7 +111,7 @@ def show_raw_data(df):
         try:
             k = int(i)
         except(ValueError):
-            i = 5
+            i = 10
         else:
             i = k
 
